@@ -19,8 +19,10 @@ The dataset is of fraud detection consists of transaction and identity files lin
 This specific dataset is collected from Kaggle, a very popular data science competition organizer and datasets provider. 
 
 ### Datasource1: ExampleSource
-* Metadata URL: https://mobilithek.info/offers/-6901989592576801458
-* Data URL: https://raw.githubusercontent.com/od-ms/radverkehr-zaehlstellen/main/100035541/2019-01.csv
+* Test_Identity_Data URL: https://www.kaggle.com/competitions/ieee-fraud-detection/data?select=test_identity.csv
+* Test_transaction_Data URL: https://www.kaggle.com/competitions/ieee-fraud-detection/data?select=test_transaction.csv
+* Train_Identity_Data URL: https://www.kaggle.com/competitions/ieee-fraud-detection/data?select=train_identity.csv
+* Train_transaction_Data URL: https://www.kaggle.com/competitions/ieee-fraud-detection/data?select=train_transaction.csv
 * Data Type: CSV
 
 Short description of the DataSource.
