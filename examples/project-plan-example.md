@@ -2,21 +2,21 @@
 
 ## Title
 <!-- Give your project a short title. -->
-Awesome MADE project.
+IEEE-CIS Fraud Detection.
 
 ## Main Question
 
 <!-- Think about one main question you want to answer based on the data. -->
-1. Does writing an example question help students write better project plans?
+How can we predict the probability that an online transaction is fraudulent, based on the binary target "isFraud"?
 
 ## Description
 
 <!-- Describe your data science project in max. 200 words. Consider writing about why and how you attempt it. -->
-XY is an important problem, because... This projects analyzes XY, using method A. The results can give insights into...
+The dataset is of fraud detection consists of transaction and identity files linked by TransactionID. The transaction file includes categorical features related to payment details and email domains, while the identity file provides additional user verification data. The TransactionDT feature indicates time as a delta from a reference point, not as a timestamp. Participants must predict the 'isFraud' binary target for the test set, with the training set including this target for model development.
 
 ## Datasources
 
-<!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
+This specific dataset is collected from Kaggle, a very popular data science competition organizer and datasets provider. 
 
 ### Datasource1: ExampleSource
 * Metadata URL: https://mobilithek.info/offers/-6901989592576801458
