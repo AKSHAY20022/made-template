@@ -5,7 +5,7 @@ DATA_URL = "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/rhein-
 
 # download and return the dataset as a DataFrame
 def download_data(url):
-    return pd.read_csv(url, on_bad_lines='skip')
+    return pd.read_csv(url, sep=';')
 
 # insert the data into the SQLite table
 def insert_data(df, db_name):
