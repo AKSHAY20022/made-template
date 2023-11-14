@@ -1,4 +1,3 @@
-import requests
 import pandas as pd
 import sqlite3
 
@@ -6,10 +5,7 @@ DATA_URL = "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/rhein-
 
 # download and return the dataset as a DataFrame
 def download_data(url):
-    response = requests.get(url)
-    with open('temp_data.csv', 'wb') as file:
-        file.write(response.content)
-    return pd.read_csv('temp_data.csv', on_bad_lines='skip')
+    return pd.read_csv(url, on_bad_lines='skip')
 
 # insert the data into the SQLite table
 def insert_data(df, db_name):
