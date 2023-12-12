@@ -14,10 +14,18 @@ def load_and_preprocess_data(url):
     # Validate CIN values
     df = df[df['CIN'].str.len() == 5]
 
-    # Convert string values to integers and filter
+    # Numeric columns
     numeric_cols = ['petrol', 'diesel', 'gas', 'electro', 'hybrid', 'plugInHybrid', 'others']
+
+    # Remove rows with '-' in numeric columns
+    for col in numeric_cols:
+        df = df[df[col] != '-']
+
+    # Convert string values to integers and filter
     for col in numeric_cols:
         df[col] = pd.to_numeric(df[col], errors='coerce')
+
+    # Drop rows with NaN (which were non-numeric values initially)
     df = df.dropna().query(' & '.join([f"{col} > 0" for col in numeric_cols]))
 
     return df
